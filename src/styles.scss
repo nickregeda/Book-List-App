@@ -1,7 +1,13 @@
+@import "../public/assets/styles/base";
+@import "../public/assets/styles/shared";
+@import "../public/assets/styles/variables";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  scrollbar-width: thin;
 }
 
 html, body {
@@ -11,4 +17,7 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
