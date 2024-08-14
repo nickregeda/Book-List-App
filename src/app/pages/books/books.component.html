@@ -4,11 +4,17 @@
 
   <ul class="books__list">
     @for (book of books(); track book.id) {
-      <li class="books__item">
-        <article class="books__article">
-          <h2 class="books__item-title">{{ book.title }}</h2>
-          <p class="books__item-author">{{ book.author }}</p>
-          <p class="books__item-year">{{ book.publishedYear }}</p>
+      <li class="book-item">
+        <article class="book-item__article">
+          <div class="book-item__img-wrapper">
+            <img class="book-item__img" [ngSrc]="book.coverImageUrl" fill alt="book cover image">
+          </div>
+
+          <div class="book-item__info-wrapper">
+            <h2 class="book-item__title">{{ book.title }}</h2>
+            <p class="book-item__author"><i>{{ book.author }}</i></p>
+            <p class="book-item__year">{{ book.publishedYear }}</p>
+          </div>
         </article>
       </li>
     }
