@@ -7,7 +7,6 @@ export interface IBook {
   publisher: string;
   language: string;
 
-  pageCount?: number;
   coverImageUrl?: string;
   description?: string;
 }
