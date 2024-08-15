@@ -1,0 +1,14 @@
+<div class="book-info">
+  <h2 class="book-info__title">{{ book().title }}</h2>
+
+  <div class="book-info__paragraph-wrapper">
+    <p class="book-info__paragraph">{{ book().author }}</p>
+    <p class="book-info__paragraph">{{ book().publishedYear }}</p>
+    <p class="book-info__paragraph">{{ book().genre }}</p>
+    <p class="book-info__paragraph">{{ book().publisher }}</p>
+    <p class="book-info__paragraph">{{ book().language }}</p>
+    <p class="book-info__paragraph">{{ book().description }}</p>
+  </div>
+
+  <button class="book-info__edit-btn" type="button" mat-flat-button (click)="enableEditMode()">Edit</button>
+</div>
