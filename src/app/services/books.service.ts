@@ -1,7 +1,7 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { finalize, take } from 'rxjs';
+import { delay, finalize, take } from 'rxjs';
 
 import { IBook } from '../models/book.model';
 
@@ -33,6 +33,7 @@ export class BooksService {
     this.http.get<{ books: IBook[] }>(this.baseUrl)
     .pipe(
       take(1),
+      delay(800),
       finalize(() => this.finishLoading()),
     )
     .subscribe({

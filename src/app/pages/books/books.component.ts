@@ -1,5 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { MatProgressBar } from '@angular/material/progress-bar';
 
 import { BooksService } from '../../services/books.service';
 import { BookItemComponent } from '../../components/book-item/book-item.component';
@@ -16,11 +17,12 @@ import { BookItemComponent } from '../../components/book-item/book-item.componen
       ]),
     ]),
   ],
-  imports: [ BookItemComponent ],
+  imports: [ MatProgressBar, BookItemComponent ],
 })
 export class BooksComponent implements OnInit {
   private booksService = inject(BooksService);
   public books = this.booksService.books;
+  public loading = this.booksService.loading;
 
   ngOnInit() {
     this.booksService.loadBooks();
