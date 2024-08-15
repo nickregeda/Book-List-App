@@ -17,6 +17,8 @@ export class BooksService {
   public books = signal<IBook[]>([]);
   public loading = signal<boolean>(false);
 
+  public isEditMode = signal(false);
+
   private startLoading(): void {
     this.loading.set(true);
   }
@@ -37,5 +39,19 @@ export class BooksService {
       next: (response) => this.books.set(response.books),
       error: (error) => this.snackBar.open(error.message),
     });
+  }
+
+  public createBook(book: Omit<IBook, 'id'>): void {
+    const newBook = { id: Date.now(), ...book };
+    this.books.update((books) => [ ...books, newBook ]);
+  }
+
+  public updateBook(updatedBook: IBook): void {
+    this.books.update((books) =>
+      books.map((book) => book.id === updatedBook.id ? updatedBook : book));
+  }
+
+  public toggleEditMode(isEdit: boolean): void {
+    this.isEditMode.set(isEdit);
   }
 }
