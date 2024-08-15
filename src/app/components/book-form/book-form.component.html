@@ -1,0 +1,17 @@
+<form class="book-form" [formGroup]="bookForm" (ngSubmit)="saveBook()">
+  @for (el of bookFormEls; track el.title) {
+    <mat-form-field>
+      <mat-label>{{ el.title }}</mat-label>
+
+      @if (!el.title.includes('Description')) {
+        <input type="text" matInput [placeholder]="el.title" [formControlName]="el.controlName">
+      } @else {
+        <textarea matInput [placeholder]="el.title" [formControlName]="el.controlName"></textarea>
+      }
+    </mat-form-field>
+  }
+  <div class="book-form__btn-wrapper">
+    <button type="button" mat-button (click)="disableEditMode()">Cancel</button>
+    <button type="submit" mat-flat-button [disabled]="!isFormChanged">Save</button>
+  </div>
+</form>
