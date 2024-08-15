@@ -6,6 +6,12 @@
 
 .book-item {
   &__article {
+    height: 420px;
+    padding-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+
     border-radius: 5px;
     background-color: var(--white);
     box-shadow: 0 0 5px var(--shadow-color);
@@ -20,6 +26,11 @@
         transform: scale(1.2);
       }
     }
+  }
+
+  &__title {
+    margin-top: 15px;
+    padding: 0 20px;
   }
 
   &__img-wrapper {
@@ -40,6 +51,7 @@
   }
 
   &__info-wrapper {
-    padding: 10px 20px;
+    margin-top: auto;
+    padding: 0 20px;
   }
 }
