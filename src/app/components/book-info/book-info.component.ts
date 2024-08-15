@@ -1,7 +1,6 @@
 import { Component, inject, input } from '@angular/core';
 import { MatButton } from '@angular/material/button';
 
-import { BOOK_FORM_ELEMENTS } from '../book-form/book-form';
 import { BooksService } from '../../services/books.service';
 import { IBook } from '../../models/book.model';
 
