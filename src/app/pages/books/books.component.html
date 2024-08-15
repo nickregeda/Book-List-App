@@ -3,7 +3,7 @@
 
   <ul class="books__list">
     @for (book of books(); track book.id) {
-      <app-book-item [book]="book"/>
+      <app-book-item [book]="book" [@fadeOut]/>
     }
   </ul>
 </section>

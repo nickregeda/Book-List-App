@@ -14,4 +14,19 @@
   &__edit-btn {
     margin-top: auto;
   }
+
+  &__btn-wrapper {
+    margin-top: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+
+    button {
+      flex-grow: 1;
+      width: calc(50% - 5px);
+      min-width: 120px;
+    }
+  }
 }

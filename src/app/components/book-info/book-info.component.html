@@ -10,5 +10,8 @@
     <p class="book-info__paragraph">{{ book().description }}</p>
   </div>
 
-  <button class="book-info__edit-btn" type="button" mat-flat-button (click)="enableEditMode()">Edit</button>
+  <div class="book-info__btn-wrapper">
+    <button class="book-info__remove-btn" type="button" mat-button (click)="removeBook()">Delete</button>
+    <button class="book-info__edit-btn" type="button" mat-flat-button (click)="enableEditMode()">Edit</button>
+  </div>
 </div>

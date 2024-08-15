@@ -51,6 +51,11 @@ export class BooksService {
       books.map((book) => book.id === updatedBook.id ? updatedBook : book));
   }
 
+  public removeBook(bookId: number): void {
+    this.books.update((books) =>
+      books.filter((book) => book.id !== bookId));
+  }
+
   public toggleEditMode(isEdit: boolean): void {
     this.isEditMode.set(isEdit);
   }
