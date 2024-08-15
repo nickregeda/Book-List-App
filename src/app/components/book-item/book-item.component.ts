@@ -19,7 +19,7 @@ export class BookItemComponent {
 
   public openBookInfo(): void {
     this.matDialog.open(BookPopupComponent, {
-      data: this.book(),
+      data: this.book,
       panelClass: 'mat-book-popup',
     });
   }

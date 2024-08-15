@@ -11,10 +11,10 @@
     box-shadow: 0 0 5px var(--shadow-color);
 
     cursor: pointer;
-    transition: background-color .2s ease;
+    transition: box-shadow .2s ease, background-color .2s ease;
 
     &:hover {
-      background-color: var(--lightgray);
+      box-shadow: 0 0 10px 5px var(--shadow-color);
 
       .book-item__img {
         transform: scale(1.2);
