@@ -34,7 +34,7 @@ export class BookFormComponent implements OnInit {
   private matDialogRef = inject(MatDialogRef);
   private booksService = inject(BooksService);
 
-  private isAddBookPopup = computed(() => !this.book());
+  public isAddBookPopup = computed(() => !this.book());
 
   public bookFormEls = BOOK_FORM_ELEMENTS;
   public bookForm: FormGroup;

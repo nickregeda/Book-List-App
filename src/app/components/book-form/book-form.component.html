@@ -1,11 +1,14 @@
 <form class="book-form" [formGroup]="bookForm" (ngSubmit)="submit()">
-  <label class="book-form__img-label">
-    <p>Upload Cover Image</p>
-    @if (coverImage) {
-      <mat-icon>image</mat-icon>
-    }
-    <input type="file" (change)="onImageUpload($event)" style="display: none">
-  </label>
+
+  @if (isAddBookPopup()) {
+    <label class="book-form__img-label">
+      <p>Upload Cover Image</p>
+      @if (coverImage) {
+        <mat-icon>image</mat-icon>
+      }
+      <input type="file" (change)="onImageUpload($event)" style="display: none">
+    </label>
+  }
 
   @for (el of bookFormEls; track el.title) {
     <mat-form-field>
