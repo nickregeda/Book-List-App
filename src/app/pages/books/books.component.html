@@ -1,0 +1,19 @@
+<section class="books">
+  <div class="books__title-wrapper">
+    <h1 class="books__title">Book List</h1>
+    <button type="button" mat-raised-button (click)="openAddBookPopup()">Add</button>
+  </div>
+  @if (loading()) {
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  }
+
+  <ul class="books__list">
+    @for (book of books(); track book.id) {
+      <app-book-item [book]="book" [@listAnimation]/>
+    } @empty {
+      @if (!loading()) {
+        <p>No books yet...</p>
+      }
+    }
+  </ul>
+</section>

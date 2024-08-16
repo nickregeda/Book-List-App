@@ -1,0 +1,13 @@
+.mat-book-popup {
+  --mat-dialog-container-max-width: 800px;
+  max-height: 800px;
+
+  width: 70vw;
+  height: 90vh;
+}
+
+.mat-add-book-popup {
+  .book-form {
+    padding: 5%;
+  }
+}

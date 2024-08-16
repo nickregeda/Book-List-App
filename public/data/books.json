@@ -1,0 +1,124 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "publishedYear": 1960,
+      "genre": "Fiction",
+      "publisher": "J.B. Lippincott & Co.",
+      "language": "English",
+      "description": "A novel about the serious issues of rape and racial inequality.",
+      "rating": 4.9,
+      "coverImageUrl": "/assets/images/To_Kill_a_Mockingbird.jpg"
+    },
+    {
+      "id": 2,
+      "title": "1984",
+      "author": "George Orwell",
+      "publishedYear": 1949,
+      "genre": "Dystopian",
+      "publisher": "Secker & Warburg",
+      "language": "English",
+      "description": "A novel about a totalitarian regime that employs extreme surveillance.",
+      "rating": 4.8,
+      "coverImageUrl": "/assets/images/1984.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "publishedYear": 1813,
+      "genre": "Romance",
+      "publisher": "T. Egerton",
+      "language": "English",
+      "description": "A classic novel about manners, marriage, and morality.",
+      "rating": 4.7,
+      "coverImageUrl": "/assets/images/Pride_and_Prejudice.jpg"
+    },
+    {
+      "id": 4,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "publishedYear": 1925,
+      "genre": "Tragedy",
+      "publisher": "Charles Scribner's Sons",
+      "language": "English",
+      "description": "A novel about the American Dream and the roaring twenties.",
+      "rating": 4.6,
+      "coverImageUrl": "/assets/images/The_Great_Gatsby.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Moby Dick",
+      "author": "Herman Melville",
+      "publishedYear": 1851,
+      "genre": "Adventure",
+      "publisher": "Harper & Brothers",
+      "language": "English",
+      "description": "The story of Captain Ahab's quest to avenge the white whale, Moby Dick.",
+      "rating": 4.5,
+      "coverImageUrl": "/assets/images/Moby_Dick.jpg"
+    },
+    {
+      "id": 6,
+      "title": "War and Peace",
+      "author": "Leo Tolstoy",
+      "publishedYear": 1869,
+      "genre": "Historical",
+      "publisher": "The Russian Messenger",
+      "language": "Russian",
+      "description": "A novel that intertwines the lives of individuals and the state in Russia during the Napoleonic era.",
+      "rating": 4.4,
+      "coverImageUrl": "/assets/images/War_and_Peace.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "publishedYear": 1866,
+      "genre": "Psychological Fiction",
+      "publisher": "The Russian Messenger",
+      "language": "Russian",
+      "description": "A novel exploring the moral dilemmas of crime and justice.",
+      "rating": 4.6,
+      "coverImageUrl": "/assets/images/Crime_and_Punishment.jpg"
+    },
+    {
+      "id": 8,
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "publishedYear": 1951,
+      "genre": "Fiction",
+      "publisher": "Little, Brown and Company",
+      "language": "English",
+      "description": "A novel about teenage angst and alienation.",
+      "rating": 4.3,
+      "coverImageUrl": "/assets/images/The_Catcher_in_the_Rye.jpg"
+    },
+    {
+      "id": 9,
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "publishedYear": 1954,
+      "genre": "Fantasy",
+      "publisher": "Allen & Unwin",
+      "language": "English",
+      "description": "An epic high-fantasy novel set in the fictional world of Middle-earth.",
+      "rating": 4.9,
+      "coverImageUrl": "/assets/images/The_Lord_of_the_Rings.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "publishedYear": 1932,
+      "genre": "Dystopian",
+      "publisher": "Chatto & Windus",
+      "language": "English",
+      "description": "A novel about a dystopian future where society is controlled by technology and conditioning.",
+      "rating": 4.5,
+      "coverImageUrl": "/assets/images/Brave_New_World.jpg"
+    }
+  ]
+}

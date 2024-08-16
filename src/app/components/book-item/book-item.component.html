@@ -1,0 +1,16 @@
+<li class="book-item" (click)="openBookInfo()">
+  <article class="book-item__article">
+
+    <div class="book-item__img-wrapper">
+      <img class="book-item__img" [src]="book().coverImageUrl" alt="book cover image" draggable="false">
+    </div>
+
+    <h2 class="book-item__title">{{ book().title }}</h2>
+
+    <div class="book-item__info-wrapper">
+      <p class="book-item__author"><i>{{ book().author }}</i></p>
+      <p class="book-item__year">{{ book().publishedYear }}</p>
+    </div>
+
+  </article>
+</li>

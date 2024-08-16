@@ -1,0 +1,15 @@
+<div class="book-popup">
+  <button class="book-popup__close-btn" mat-icon-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+
+  <img class="book-popup__img" [src]="book().coverImageUrl" alt="book cover image" draggable="false">
+
+  <div class="book-popup__info-wrapper">
+    @if (isEditMode()) {
+      <app-book-form [book]="book()"/>
+    } @else {
+      <app-book-info [book]="book()"/>
+    }
+  </div>
+</div>
