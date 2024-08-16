@@ -1,4 +1,9 @@
-<form class="book-form" [formGroup]="bookForm" (ngSubmit)="saveBook()">
+<form class="book-form" [formGroup]="bookForm" (ngSubmit)="submit()">
+  <label>
+    <span>Cover Image</span>
+    <input type="file" (change)="onImageUpload($event)">
+  </label>
+
   @for (el of bookFormEls; track el.title) {
     <mat-form-field>
       <mat-label>{{ el.title }}</mat-label>
@@ -11,7 +16,7 @@
     </mat-form-field>
   }
   <div class="book-form__btn-wrapper">
-    <button type="button" mat-button (click)="disableEditMode()">Cancel</button>
-    <button type="submit" mat-flat-button [disabled]="!isFormChanged">Save</button>
+    <button type="button" mat-button (click)="cancel()">Cancel</button>
+    <button type="submit" mat-flat-button [disabled]="disabled">Save</button>
   </div>
 </form>
