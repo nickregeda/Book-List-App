@@ -9,7 +9,7 @@
 
   <ul class="books__list">
     @for (book of books(); track book.id) {
-      <app-book-item [book]="book" [@fadeOut]/>
+      <app-book-item [book]="book" [@listAnimation]/>
     } @empty {
       @if (!loading()) {
         <p>No books yet...</p>

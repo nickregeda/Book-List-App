@@ -44,7 +44,7 @@ export class BooksService {
 
   public createBook(book: Omit<IBook, 'id'>): void {
     const newBook = { id: Date.now(), ...book };
-    this.books.update((books) => [ ...books, newBook ]);
+    this.books.update((books) => [ newBook, ...books ]);
   }
 
   public updateBook(updatedBook: IBook): void {

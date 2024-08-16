@@ -15,9 +15,13 @@ import { BookFormComponent } from '../../components/book-form/book-form.componen
   templateUrl: './books.component.html',
   styleUrl: './books.component.scss',
   animations: [
-    trigger('fadeOut', [
+    trigger('listAnimation', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'scale(0.4)' }),
+        animate('.2s ease-out', style({ opacity: 1, transform: 'scale(1)' })),
+      ]),
       transition(':leave', [
-        animate('.2s ease-out', style({ opacity: 0, transform: 'scale(0.4)' })),
+        animate('.2s ease-in', style({ opacity: 0, transform: 'scale(0.4)' })),
       ]),
     ]),
   ],

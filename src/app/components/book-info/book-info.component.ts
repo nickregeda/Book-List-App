@@ -27,7 +27,7 @@ export class BookInfoComponent {
     const confirmRemove = confirm(`Are you sure to delete this book: ${ this.book().title }?`);
     if (confirmRemove) {
       this.matDialogRef.close();
-      setTimeout(() => this.booksService.removeBook(this.book().id), 300);
+      this.booksService.removeBook(this.book().id);
     }
   }
 }
