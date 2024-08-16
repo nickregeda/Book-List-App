@@ -1,6 +1,7 @@
 import { Component, computed, inject, input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
+import { MatIcon } from '@angular/material/icon';
 import { MatInput } from '@angular/material/input';
 import { MatButton } from '@angular/material/button';
 import { MatDialogRef } from '@angular/material/dialog';
@@ -22,6 +23,7 @@ import { BooksService } from '../../services/books.service';
     MatLabel,
     MatInput,
     MatButton,
+    MatIcon,
   ],
 })
 export class BookFormComponent implements OnInit {
@@ -33,10 +35,10 @@ export class BookFormComponent implements OnInit {
   private booksService = inject(BooksService);
 
   private isAddBookPopup = computed(() => !this.book());
-  private coverImage: string;
 
   public bookFormEls = BOOK_FORM_ELEMENTS;
   public bookForm: FormGroup;
+  public coverImage: string;
 
   ngOnInit() {
     this.bookForm = this.fb.group({
