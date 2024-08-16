@@ -3,9 +3,7 @@
     <mat-icon>close</mat-icon>
   </button>
 
-  <div class="book-popup__img-wrapper">
-    <img class="book-popup__img" [ngSrc]="book().coverImageUrl" fill priority alt="book cover image" draggable="false">
-  </div>
+  <img class="book-popup__img" [src]="book().coverImageUrl" alt="book cover image" draggable="false">
 
   <div class="book-popup__info-wrapper">
     @if (isEditMode()) {

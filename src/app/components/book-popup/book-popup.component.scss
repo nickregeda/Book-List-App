@@ -8,15 +8,13 @@
   flex-wrap: wrap;
   gap: 20px;
 
-  &__img-wrapper {
-    position: relative;
-
+  &__img {
     flex-grow: 1;
+
     width: calc(40% - 10px);
     min-width: 200px;
-  }
+    height: 100%;
 
-  &__img {
     object-fit: cover;
   }
 
