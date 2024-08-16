@@ -1,5 +1,8 @@
 <section class="books">
-  <h1 class="books__title">Book List</h1>
+  <div class="books__title-wrapper">
+    <h1 class="books__title">Book List</h1>
+    <button type="button" mat-raised-button (click)="openAddBookPopup()">Add</button>
+  </div>
   @if (loading()) {
     <mat-progress-bar mode="indeterminate"></mat-progress-bar>
   }

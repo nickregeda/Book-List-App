@@ -1,9 +1,13 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { MatProgressBar } from '@angular/material/progress-bar';
+import { MatIcon } from '@angular/material/icon';
+import { MatButton } from '@angular/material/button';
+import { MatDialog } from '@angular/material/dialog';
 
 import { BooksService } from '../../services/books.service';
 import { BookItemComponent } from '../../components/book-item/book-item.component';
+import { BookFormComponent } from '../../components/book-form/book-form.component';
 
 @Component({
   selector: 'app-books',
@@ -17,14 +21,26 @@ import { BookItemComponent } from '../../components/book-item/book-item.componen
       ]),
     ]),
   ],
-  imports: [ MatProgressBar, BookItemComponent ],
+  imports: [
+    MatIcon,
+    MatButton,
+    MatProgressBar,
+    BookItemComponent,
+  ],
 })
 export class BooksComponent implements OnInit {
+  private matDialog = inject(MatDialog);
   private booksService = inject(BooksService);
   public books = this.booksService.books;
   public loading = this.booksService.loading;
 
   ngOnInit() {
     this.booksService.loadBooks();
+  }
+
+  public openAddBookPopup(): void {
+    this.matDialog.open(BookFormComponent, {
+      panelClass: [ 'mat-book-popup', 'mat-add-book-popup' ],
+    });
   }
 }
