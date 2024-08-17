@@ -14,6 +14,7 @@ export class BooksService {
   private http = inject(HttpClient);
   private snackBar = inject(MatSnackBar);
 
+  private ALL_BOOKS: IBook[] = [];
   public books = signal<IBook[]>([]);
   public loading = signal<boolean>(false);
 
@@ -37,7 +38,10 @@ export class BooksService {
       finalize(() => this.finishLoading()),
     )
     .subscribe({
-      next: (response) => this.books.set(response.books),
+      next: (response) => {
+        this.books.set(response.books);
+        this.ALL_BOOKS = response.books;
+      },
       error: (error) => this.snackBar.open(error.message),
     });
   }
@@ -63,12 +67,12 @@ export class BooksService {
 
   public searchBook(query: string): void {
     if (!query) {
-      this.loadBooks();
+      this.books.set(this.ALL_BOOKS);
       return;
     }
 
     query = query.toLowerCase();
-    this.books.update((books) =>
-      books.filter((book) => book.title.toLowerCase().includes(query) || book.author.toLowerCase().includes(query)));
+    this.books.update(() =>
+      this.ALL_BOOKS.filter((book) => book.title.toLowerCase().includes(query) || book.author.toLowerCase().includes(query)));
   }
 }
