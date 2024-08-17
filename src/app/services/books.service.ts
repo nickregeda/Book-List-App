@@ -60,4 +60,14 @@ export class BooksService {
   public toggleEditMode(isEdit: boolean): void {
     this.isEditMode.set(isEdit);
   }
+
+  public searchBook(query: string): void {
+    if (!query) {
+      this.loadBooks();
+      return;
+    }
+
+    this.books.update((books) =>
+      books.filter((book) => book.title.toLowerCase().includes(query) || book.author.toLowerCase().includes(query)));
+  }
 }
