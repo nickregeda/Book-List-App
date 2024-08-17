@@ -21,4 +21,19 @@
     flex-wrap: wrap;
     gap: 20px;
   }
+
+  &__search-field {
+    height: 0;
+    visibility: hidden;
+
+    &.visible {
+      height: auto;
+      visibility: visible;
+    }
+  }
+
+  &__no-found {
+    margin: 0 auto;
+    font-size: 18px;
+  }
 }
