@@ -67,6 +67,7 @@ export class BooksService {
       return;
     }
 
+    query = query.toLowerCase();
     this.books.update((books) =>
       books.filter((book) => book.title.toLowerCase().includes(query) || book.author.toLowerCase().includes(query)));
   }
