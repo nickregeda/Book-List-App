@@ -19,6 +19,7 @@ export class BooksService {
   public loading = signal<boolean>(false);
 
   public isEditMode = signal(false);
+  public searchQuery = signal('');
 
   private startLoading(): void {
     this.loading.set(true);
@@ -26,6 +27,10 @@ export class BooksService {
 
   private finishLoading(): void {
     this.loading.set(false);
+  }
+
+  private setSearchQuery(query: string): void {
+    this.searchQuery.set(query);
   }
 
   public loadBooks(): void {
@@ -71,6 +76,7 @@ export class BooksService {
       return;
     }
 
+    this.setSearchQuery(query);
     query = query.toLowerCase();
     this.books.update(() =>
       this.ALL_BOOKS.filter((book) => book.title.toLowerCase().includes(query) || book.author.toLowerCase().includes(query)));
