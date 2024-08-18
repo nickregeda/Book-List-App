@@ -19,6 +19,7 @@ export class BooksService {
   public loading = signal<boolean>(false);
 
   public isEditMode = signal(false);
+  public searchQuery = signal('');
 
   private startLoading(): void {
     this.loading.set(true);
@@ -26,6 +27,10 @@ export class BooksService {
 
   private finishLoading(): void {
     this.loading.set(false);
+  }
+
+  private setSearchQuery(query: string): void {
+    this.searchQuery.set(query);
   }
 
   public loadBooks(): void {
@@ -66,6 +71,7 @@ export class BooksService {
   }
 
   public searchBook(query: string): void {
+    this.setSearchQuery(query);
     if (!query) {
       this.books.set(this.ALL_BOOKS);
       return;
