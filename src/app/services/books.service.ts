@@ -71,12 +71,12 @@ export class BooksService {
   }
 
   public searchBook(query: string): void {
+    this.setSearchQuery(query);
     if (!query) {
       this.books.set(this.ALL_BOOKS);
       return;
     }
 
-    this.setSearchQuery(query);
     query = query.toLowerCase();
     this.books.update(() =>
       this.ALL_BOOKS.filter((book) => book.title.toLowerCase().includes(query) || book.author.toLowerCase().includes(query)));
